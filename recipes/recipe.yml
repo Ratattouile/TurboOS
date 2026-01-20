@@ -59,11 +59,6 @@ modules:
         - FiraCode
         - Hack
 
-  # 6. LOGÓTIPO DE ARRANQUE (Plymouth)
-  # ATENÇÃO: Repara que este traço está alinhado com o das Fontes em cima!
-  - type: plymouth
-    theme: turbo-theme
-
   # 7. TRUQUE NEOFETCH
   - type: script
     scripts:
