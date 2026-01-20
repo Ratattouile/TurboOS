@@ -11,41 +11,6 @@ modules:
       - source: system
         destination: /
 
-  # 3. PACOTES DO SISTEMA (RPMs)
-  - type: rpm-ostree
-    install:
-      - steam
-      - lutris
-      - gamemode
-      - mangohud
-      - gamescope
-      - sunshine
-      - htop
-      - fastfetch
-      - git
-      - wget
-      - distrobox
-      - zsh
-      - android-tools
-
-  # 4. APLICAÇÕES (Flatpaks)
-  - type: default-flatpaks
-    notify: true
-    system:
-      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
-      repo-name: flathub
-      repo-title: "Flathub (Sistema)"
-      install:
-        - com.discordapp.Discord
-        - com.obsproject.Studio
-        - com.visualstudio.code
-        - com.jetbrains.IntelliJ-IDEA-Community
-        - org.libretro.RetroArch
-        - org.DolphinEmu.dolphin-emu
-        - net.pcsx2.PCSX2
-        - org.duckstation.DuckStation
-        - org.ryujinx.Ryujinx
-
   # 5. FONTES
   - type: fonts
     fonts:
