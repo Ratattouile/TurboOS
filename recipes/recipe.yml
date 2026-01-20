@@ -10,17 +10,3 @@ modules:
     files:
       - source: system
         destination: /
-
-  # 5. FONTES
-  - type: fonts
-    fonts:
-      nerd-fonts:
-        - FiraCode
-        - Hack
-
-  # 7. TRUQUE NEOFETCH
-  - type: script
-    scripts:
-      - |
-        echo 'alias neofetch="fastfetch"' >> /etc/bashrc
-        echo 'alias neofetch="fastfetch"' >> /etc/zshrc
