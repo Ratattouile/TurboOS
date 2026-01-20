@@ -70,5 +70,3 @@ modules:
       - |
         echo 'alias neofetch="fastfetch"' >> /etc/bashrc
         echo 'alias neofetch="fastfetch"' >> /etc/zshrc
-  - type: plymouth
-    theme: turbo-theme
