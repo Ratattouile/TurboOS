@@ -63,3 +63,12 @@ modules:
       nerd-fonts:
         - FiraCode
         - Hack
+
+  - type: script
+    scripts:
+      - |
+        echo 'alias neofetch="fastfetch"' >> /etc/bashrc
+        echo 'alias neofetch="fastfetch"' >> /etc/zshrc
+
+  - type: plymouth
+    theme: turbo-theme
