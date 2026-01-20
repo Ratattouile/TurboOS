@@ -29,6 +29,11 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      # --- O TRUQUE NOVO ESTÁ AQUI ---
+      - name: Forçar remoção do cosign.pub
+        run: rm -f cosign.pub
+      # -------------------------------
+
       - name: Build Custom Image
         uses: blue-build/github-action@v1.10
         with:
@@ -36,8 +41,4 @@ jobs:
           registry_token: ${{ github.token }}
           pr_event_number: ${{ github.event.number }}
           maximize_build_space: true
-          
-          # AQUI ESTÁ A SOLUÇÃO:
-          # Em vez de 'disable_signing', usamos o 'build_opts' para passar
-          # o comando diretamente ao motor.
           build_opts: --no-sign
