@@ -29,7 +29,7 @@ modules:
       - sunshine
       # Ferramentas e Dev
       - htop
-      - neofetch
+      - fastfetch
       - git
       - wget
       - distrobox
