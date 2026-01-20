@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Turbo OS Theme
+Description=Tema oficial do Turbo OS
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/turbo-theme
+ScriptFile=/usr/share/plymouth/themes/turbo-theme/turbo-theme.script

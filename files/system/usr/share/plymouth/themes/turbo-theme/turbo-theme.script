@@ -1,0 +1,23 @@
+// Carrega a imagem do logo (tem de se chamar logo.png)
+logo_image = Image("logo.png");
+
+// Função que desenha o logo no centro do ecrã
+fun refresh_callback ()
+  {
+    // Obter tamanho do ecrã e da imagem
+    screen_width = Window.GetWidth();
+    screen_height = Window.GetHeight();
+    logo_width = logo_image.GetWidth();
+    logo_height = logo_image.GetHeight();
+
+    // Calcular o centro matemático
+    logo_x = (screen_width / 2) - (logo_width / 2);
+    logo_y = (screen_height / 2) - (logo_height / 2);
+
+    // Colocar a imagem na posição calculada
+    logo_sprite = Sprite(logo_image);
+    logo_sprite.SetPosition(logo_x, logo_y, 0);
+  }
+
+// Ativar a função
+Plymouth.SetRefreshFunction (refresh_callback);
