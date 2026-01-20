@@ -35,7 +35,9 @@ jobs:
           recipe: ${{ matrix.recipe }}
           registry_token: ${{ github.token }}
           pr_event_number: ${{ github.event.number }}
-          # AQUI ESTÁ A CHAVE: Removemos qualquer menção a chaves secretas
-          # e forçamos o disable_signing
-          disable_signing: true
           maximize_build_space: true
+          
+          # AQUI ESTÁ A SOLUÇÃO:
+          # Em vez de 'disable_signing', usamos o 'build_opts' para passar
+          # o comando diretamente ao motor.
+          build_opts: --no-sign
