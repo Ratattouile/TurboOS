@@ -17,17 +17,15 @@ modules:
     install:
       - xpadneo   # Comandos Xbox Bluetooth
 
-  # 3. PACOTES DO SISTEMA (RPMs - Camada Base)
+  # 3. PACOTES DO SISTEMA (RPMs)
   - type: rpm-ostree
     install:
-      # Gaming
       - steam
       - lutris
       - gamemode
       - mangohud
       - gamescope
       - sunshine
-      # Ferramentas e Dev
       - htop
       - fastfetch
       - git
@@ -36,7 +34,7 @@ modules:
       - zsh
       - android-tools
 
-  # 4. APLICAÇÕES E EMULADORES (Flatpaks)
+  # 4. APLICAÇÕES (Flatpaks)
   - type: default-flatpaks
     notify: true
     system:
@@ -44,19 +42,15 @@ modules:
       repo-name: flathub
       repo-title: "Flathub (Sistema)"
       install:
-        # Apps
         - com.discordapp.Discord
         - com.obsproject.Studio
-        # IDEs / Dev
         - com.visualstudio.code
         - com.jetbrains.IntelliJ-IDEA-Community
-        # Emuladores
         - org.libretro.RetroArch
         - org.DolphinEmu.dolphin-emu
         - net.pcsx2.PCSX2
         - org.duckstation.DuckStation
         - org.ryujinx.Ryujinx
-        - com.heroicgameslauncher.hgl
 
   # 5. FONTES
   - type: fonts
@@ -65,11 +59,16 @@ modules:
         - FiraCode
         - Hack
 
+  # 6. LOGÓTIPO DE ARRANQUE (Plymouth)
+  # ATENÇÃO: Repara que este traço está alinhado com o das Fontes em cima!
+  - type: plymouth
+    theme: turbo-theme
+
+  # 7. TRUQUE NEOFETCH
   - type: script
     scripts:
       - |
         echo 'alias neofetch="fastfetch"' >> /etc/bashrc
         echo 'alias neofetch="fastfetch"' >> /etc/zshrc
-
   - type: plymouth
     theme: turbo-theme
