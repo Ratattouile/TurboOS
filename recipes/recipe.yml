@@ -11,12 +11,6 @@ modules:
       - source: system
         destination: /
 
-  # 2. DRIVERS DE HARDWARE EXTRA
-  - type: akmods
-    base: main
-    install:
-      - xpadneo   # Comandos Xbox Bluetooth
-
   # 3. PACOTES DO SISTEMA (RPMs)
   - type: rpm-ostree
     install:
